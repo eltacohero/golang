@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
-	"bytes"
 	"crypto/sha256"
 )
 
@@ -13,7 +12,9 @@ func main() {
 	if err != nil{
 		log.Fatal(err)
 	}
-
-	fmt.Printf("File contents: %s", content)
+	
+	h := sha256.New()
+	h.Write([]byte(content))
+	fmt.Printf("%x", h.Sum(nil))
 }
 
