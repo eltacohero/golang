@@ -11,7 +11,7 @@ func main() {
 	var version = flag.Bool("version", false, "gives program version")
 	flag.Parse()
 	fmt.Println("Hello, World!")
-	if *version == true {
+	if *version{
 	fmt.Println(VERSION)
 	}
 }
