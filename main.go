@@ -5,9 +5,13 @@ import (
 	"flag"
 )
 
-const version = "1.0"
+const VERSION = "1.0"
 
 func main() {
-	fmt.Println("Hello, World!")
+	var version = flag.Bool("version", true, "gives program version")
 	flag.Parse()
+	fmt.Println("Hello, World!")
+	if *version == true {
+	fmt.Println(VERSION)
+	}
 }
