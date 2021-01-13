@@ -6,8 +6,8 @@ import (
 
 type IPAddr [4]byte
 
-func (ipAddr IPAddr) String() string {
-	return fmt.Sprintf("%v.%v.%v.%v", ipAddr[0], ipAddr[1],ipAddr[2],ipAddr[3])
+func (ip IPAddr) String() string {
+	return fmt.Sprintf("%v.%v.%v.%v", ip[0], ip[1],ip[2],ip[3])
 }
 
 func main () {
