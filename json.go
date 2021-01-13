@@ -6,12 +6,14 @@ import (
 )
 
 type Users struct {
+	ID int
 	Login string
 	Password string
 } 
 
 func main() {
 	group := Users{
+		ID: 1,
 		Login: "Paul",
 		Password: "pass123",
 	}
